@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\frontend;
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.home');
-});
+// Route::get('/', function () {
+//     return view('admin.home');
+// });
 
-Route::get('/user/{id}', [frontend::class, 'index']);
+// Route::get('/user/{id}', [frontend::class, 'index']);
 
+Route::get('/', [FrontendController::class, 'index']);
